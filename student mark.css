@@ -1,0 +1,441 @@
+ *{
+    box-sizing: border-box;
+}
+
+
+body {
+
+    margin: 0;
+
+    padding: 20px;
+
+    font-family: Arial, sans-serif;
+
+    background-color: #f2f2f2;
+}
+
+
+.container {
+
+    max-width: 1000px;
+
+    margin: auto;
+}
+
+
+.container > h1 {
+
+    text-align: center;
+
+    color: #222;
+}
+
+
+/* =========================
+   SETTINGS
+   ========================= */
+
+.controls {
+
+    background: white;
+
+    padding: 25px;
+
+    border-radius: 12px;
+
+    margin-bottom: 30px;
+}
+
+
+.controls h2 {
+
+    margin-top: 25px;
+
+    margin-bottom: 15px;
+}
+
+
+.controls label {
+
+    display: block;
+
+    margin-top: 15px;
+
+    margin-bottom: 6px;
+
+    font-weight: bold;
+}
+
+
+/* File input */
+
+input[type="file"] {
+
+    width: 100%;
+
+    padding: 8px;
+}
+
+
+/* Font selector */
+
+select {
+
+    width: 100%;
+
+    padding: 10px;
+
+    border: 1px solid #aaa;
+
+    border-radius: 5px;
+
+    font-size: 16px;
+}
+
+
+/* Colour selectors */
+
+input[type="color"] {
+
+    width: 70px;
+
+    height: 40px;
+
+    padding: 2px;
+
+    border: 1px solid #aaa;
+
+    border-radius: 5px;
+
+    cursor: pointer;
+}
+
+
+/* =========================
+   INPUT TABLE
+   ========================= */
+
+table {
+
+    width: 100%;
+
+    border-collapse: collapse;
+
+    margin-top: 15px;
+}
+
+
+table th,
+table td {
+
+    border: 1px solid #ccc;
+
+    padding: 10px;
+
+    text-align: center;
+}
+
+
+table th {
+
+    background-color: #333;
+
+    color: white;
+}
+
+
+input[type="text"],
+input[type="number"] {
+
+    width: 100%;
+
+    padding: 9px;
+
+    border: 1px solid #aaa;
+
+    border-radius: 5px;
+}
+
+
+/* =========================
+   BUTTONS
+   ========================= */
+
+button {
+
+    display: block;
+
+    margin: 25px auto;
+
+    padding: 13px 30px;
+
+    border: none;
+
+    border-radius: 7px;
+
+    background-color: #333;
+
+    color: white;
+
+    font-size: 16px;
+
+    cursor: pointer;
+}
+
+
+button:hover {
+
+    background-color: #555;
+}
+
+
+/* =========================
+   LEAFLET
+   ========================= */
+
+.leaflet {
+
+    width: 800px;
+
+    min-height: 1000px;
+
+    margin: 30px auto;
+
+    position: relative;
+
+    overflow: hidden;
+
+    background-size: cover;
+
+    background-position: center;
+
+    background-repeat: no-repeat;
+
+    /*
+       Important:
+       Do NOT use opacity here.
+       This keeps the background image clear.
+    */
+}
+
+
+/* Text overlay */
+
+.overlay {
+
+    min-height: 1000px;
+
+    padding: 65px 55px;
+
+    /*
+       Very light transparent background.
+       It does NOT blur the image.
+    */
+
+    background-color: rgba(255, 255, 255, 0.30);
+}
+
+
+/* =========================
+   HEADING
+   ========================= */
+
+.overlay h1 {
+
+    font-size: 44px;
+
+    margin-top: 0;
+
+    margin-bottom: 10px;
+
+    text-align: center;
+
+    font-weight: bold;
+}
+
+
+.subtitle {
+
+    text-align: center;
+
+    font-size: 21px;
+
+    margin-bottom: 55px;
+
+    font-weight: 500;
+}
+
+
+/* =========================
+   COLUMN HEADINGS
+   ========================= */
+
+.result-header {
+
+    display: grid;
+
+    grid-template-columns: 3fr 1.5fr 1fr;
+
+    padding: 0 15px 18px 15px;
+
+    font-size: 21px;
+
+    font-weight: bold;
+
+    text-align: left;
+}
+
+
+.result-header span:nth-child(2) {
+
+    text-align: center;
+}
+
+
+.result-header span:nth-child(3) {
+
+    text-align: right;
+}
+
+
+/* =========================
+   STUDENT RESULTS
+   ========================= */
+
+.result-list {
+
+    width: 100%;
+}
+
+
+.result-row {
+
+    display: grid;
+
+    grid-template-columns: 3fr 1.5fr 1fr;
+
+    padding: 22px 15px;
+
+    font-size: 21px;
+
+    font-weight: 500;
+
+    border: none;
+
+    min-height: 70px;
+
+    align-items: center;
+}
+
+
+/* Student name */
+
+.result-row span:nth-child(1) {
+
+    text-align: left;
+
+    padding-right: 25px;
+
+    word-break: break-word;
+
+    font-weight: bold;
+
+
+     /* Student names */
+    font-weight: bold;
+    font-size: 32px;
+}
+
+
+/* Index */
+
+.result-row span:nth-child(2) {
+
+    text-align: center;
+
+    padding: 0 15px; font-weight: bold;
+    font-size: 32px;
+}
+
+
+/* Marks */
+
+.result-row span:nth-child(3) {
+
+    text-align: right;
+
+    padding-left: 15px;
+
+    font-weight: bold;
+}
+
+
+/* =========================
+   DOWNLOAD BUTTON
+   ========================= */
+
+#downloadButton {
+
+    display: none;
+
+    margin-bottom: 40px;
+}
+
+
+/* =========================
+   MOBILE / TABLET
+   ========================= */
+
+@media (max-width: 850px) {
+
+    .leaflet {
+
+        width: 100%;
+
+        min-height: auto;
+    }
+
+
+    .overlay {
+
+        min-height: auto;
+
+        padding: 45px 25px;
+    }
+
+
+    .overlay h1 {
+
+        font-size: 32px;
+    }
+
+
+    .subtitle {
+
+        font-size: 18px;
+
+        margin-bottom: 35px;
+    }
+
+
+    .result-header {
+
+        font-size: 16px;
+
+        padding-bottom: 12px;
+    }
+
+
+    .result-row {
+
+        font-size: 17px;
+
+        padding: 18px 10px;
+
+        min-height: 60px;
+    }
+
+}
+
+
+

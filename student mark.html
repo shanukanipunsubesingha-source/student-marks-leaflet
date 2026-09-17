@@ -1,0 +1,253 @@
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Student Marks Leaflet</title>
+
+    <link rel="stylesheet" href="student mark.css">
+
+</head>
+
+
+<body>
+
+<div class="container">
+
+    <h1>Student Marks Leaflet</h1>
+
+
+    <!-- =========================
+         SETTINGS
+         ========================= -->
+
+    <div class="controls">
+
+        <h2>Leaflet Settings</h2>
+
+
+        <!-- Background -->
+
+        <label>
+            Background Image:
+        </label>
+
+        <input
+            type="file"
+            id="backgroundImage"
+            accept="image/*"
+        >
+
+
+        <!-- Font -->
+
+        <label>
+            Font Type:
+        </label>
+
+        <select id="fontType">
+
+            <option value="Arial">
+                Arial
+            </option>
+
+            <option value="Georgia">
+                Georgia
+            </option>
+
+            <option value="Times New Roman">
+                Times New Roman
+            </option>
+
+            <option value="Verdana">
+                Verdana
+            </option>
+
+            <option value="Trebuchet MS">
+                Trebuchet MS
+            </option>
+
+            <option value="Courier New">
+                Courier New
+            </option>
+
+        </select>
+
+
+        <!-- Heading color -->
+
+        <label>
+            Heading Colour:
+        </label>
+
+        <input
+            type="color"
+            id="headingColor"
+            value="#111111"
+        >
+
+
+        <!-- Name color -->
+
+        <label>
+            Student Name Colour:
+        </label>
+
+        <input
+            type="color"
+            id="nameColor"
+            value="#1a237e"
+        >
+
+
+        <!-- Index color -->
+
+        <label>
+            Index Colour:
+        </label>
+
+        <input
+            type="color"
+            id="indexColor"
+            value="#333333"
+        >
+
+
+        <!-- Marks color -->
+
+        <label>
+            Marks Colour:
+        </label>
+
+        <input
+            type="color"
+            id="marksColor"
+            value="#c62828"
+        >
+
+
+        <h2>Enter Student Details</h2>
+
+
+        <!-- INPUT TABLE -->
+
+        <table>
+
+            <thead>
+
+                <tr>
+
+                    <th>No.</th>
+
+                    <th>Index</th>
+
+                    <th>Name</th>
+
+                    <th>Marks</th>
+
+                </tr>
+
+            </thead>
+
+
+            <tbody id="studentInputs">
+
+                <!-- JavaScript creates 10 rows -->
+
+            </tbody>
+
+        </table>
+
+
+        <button onclick="generateLeaflet()">
+            Generate Leaflet
+        </button>
+
+    </div>
+
+
+
+    <!-- =========================
+         LEAFLET
+         ========================= -->
+
+    <div id="leaflet" class="leaflet">
+
+        <div class="overlay">
+
+            <h1 id="leafletHeading">
+                TOP 10 MARKS
+            </h1>
+
+
+            <p class="subtitle">
+                CONGRATULATIONS!
+            </p>
+
+
+            <!-- Three columns -->
+
+            <div class="result-header">
+
+                <span>NAME</span>
+
+                <span>INDEX</span>
+
+                <span>MARKS</span>
+
+            </div>
+
+
+            <!-- Results -->
+
+            <div
+                id="resultTable"
+                class="result-list">
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- DOWNLOAD -->
+
+    <button
+        id="downloadButton"
+        onclick="downloadPNG()">
+
+        Download PNG
+
+    </button>
+
+
+</div>
+
+
+
+<!-- html2canvas -->
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+
+
+<!-- JavaScript -->
+
+<script src="script.js"></script>
+
+
+</body>
+
+</html>
+
+
+
+
+
